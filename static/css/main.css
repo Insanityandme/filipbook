@@ -1,0 +1,27 @@
+body {
+  border: 1px solid #888fff;
+  padding: 50px;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.flex {
+  height: 600px;
+  border: 1px solid #555;
+
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  
+}
+
+.item {
+
+}
+
+a {
+  font-size: 14pt;
+  color: #ff66ff;
+}

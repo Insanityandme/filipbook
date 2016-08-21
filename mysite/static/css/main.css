@@ -1,0 +1,53 @@
+#wrapper {
+  border: 1px solid #aaa;
+  max-width: 80%;
+  margin: 0 auto;
+
+}
+
+.flex {
+  border: 1px solid #555;
+
+  display: flex;
+
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  
+}
+
+.flex-item {
+  background: tomato;
+  width: 150px;
+  height: 150px;
+  margin-top: 10px;
+}
+
+a {
+  font-size: 14pt;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Dynamic data */ 
+.view {
+  transition: opacity .2s ease;
+}
+
+.view.v-enter, .view.v-leave{
+  opacity: 0;
+}
+
+/* Markdown syntax */
+
+h1 {
+  color: #DDDAAA;
+}
+
+.article {
+  border: 1px solid #555;
+
+}
+
