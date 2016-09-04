@@ -42,7 +42,7 @@ class Item(models.Model):
     subtitle = models.CharField(max_length=100, unique=True, blank=True)
     link = models.CharField(max_length=100, unique=True)
     content = models.TextField()
-    thumbnail = models.ImageField(upload_to="images/")
+    thumbnail = models.ImageField(upload_to="images/", default="images/default.png")
     pub_date = models.DateField(db_index=True, auto_now_add=True)
 
     category = models.ForeignKey(Category, null=True)
@@ -53,7 +53,7 @@ class Item(models.Model):
 
 
 class ItemImage(models.Model):
-    image = models.ImageField(upload_to="images/", default="SOME STRING")
+    image = models.ImageField(upload_to="images/", default="images/default.png")
     item = models.ForeignKey(Item, null=True, related_name='images')
 
     def __str__(self):

@@ -11,7 +11,7 @@ urlpatterns = [
     url(r'^$', index),
     url(r'^admin/', admin.site.urls),
     url(r'^api/posts/$', get_all_posts),
-    url(r'^api/posts/(?P<link>[-\w]+)/', get_item_content_by_link),
+    url(r'^api/posts/(?P<link>[-\w]+)/$', get_item_content_by_link),
 ]
 
 if settings.DEBUG is True:

@@ -11,4 +11,4 @@ class ItemSerializer(serializers.ModelSerializer):
         depth = 2
 
     def get_thumbnail(self, obj):
-        return self.context['request'].build_absolute_uri(obj.thumbnail.url)
+        return obj.thumbnail.url
