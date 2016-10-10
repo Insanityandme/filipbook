@@ -1,6 +1,6 @@
 *.pycache
-commands.txt
-node_modules
-__pycache__/
+misc
+.DS_Store
+.flake8
 
 
