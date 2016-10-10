@@ -29,6 +29,8 @@ def get_env_variable(var_name):
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
+SECRET_KEY = get_env_variable("MYSITE_KEY")
+
 ALLOWED_HOSTS = []
 
 # Application definition
