@@ -1,3 +1,0 @@
-bpython==0.15
-flake8==3.0.4
-serpy==0.1.1

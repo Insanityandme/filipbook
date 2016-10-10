@@ -16,11 +16,10 @@ class ItemImageInline(admin.StackedInline):
 
 
 class ItemAdmin(admin.ModelAdmin):
-    list_display = ('title', 'pub_date', 'category', 'content_type',)
+    list_display = ('title', 'pub_date',)
     list_filter = ('pub_date',)
     ordering = ('-pub_date',)
     search_fields = ('title',)
-    # prepopulated_fields = {'slug': ('item_link',)}
 
     inlines = [ItemImageInline, ]
 
@@ -30,11 +29,12 @@ class ItemAdmin(admin.ModelAdmin):
 
 
 class CategoryAdmin(admin.ModelAdmin):
-    list_display = ('name',)
+    list_display = ('name', )
 
 
 class ContentTypeAdmin(admin.ModelAdmin):
     list_display = ('title', 'subtitle',)
+
 
 admin.site.register(Item, ItemAdmin)
 admin.site.register(ItemImage, ItemImageAdmin)
