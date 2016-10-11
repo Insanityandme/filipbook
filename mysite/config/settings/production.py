@@ -1,4 +1,5 @@
 import os
+import dj_database_url
 from .base import *
 
 # HTTPS
@@ -25,3 +26,5 @@ LOGGING = {
         },
     },
 }
+
+DATABASES["default"] = dj_database_url.config(conn_max_age=600)

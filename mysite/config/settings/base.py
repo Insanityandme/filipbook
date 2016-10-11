@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 """
 
 import os
-import dj_database_url
 from unipath import Path
 from django.core.exceptions import ImproperlyConfigured
 
@@ -133,5 +132,3 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     BASE_DIR.child("assets"),
 ]
-
-DATABASES["default"] = dj_database_url.config(conn_max_age=600)
