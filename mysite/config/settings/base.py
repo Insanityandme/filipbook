@@ -31,7 +31,7 @@ DEBUG = False
 
 SECRET_KEY = get_env_variable("MYSITE_KEY")
 
-ALLOWED_HOSTS = ['www.heroku.filipbook.com']
+ALLOWED_HOSTS = ['filipbook.herokuapp.com']
 
 # Application definition
 
