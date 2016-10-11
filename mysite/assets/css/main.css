@@ -1,5 +1,4 @@
 @import 'normalize.css';
-@import './fonts/fonts-komika.css';
 
 .Grid {
   display: flex;
@@ -23,11 +22,6 @@
 .Border {
 }
 
-.Large-box {
-  border-style: solid;
-  border-width: 27px 40px 41px;
-  border-image: url("./../images/big-border-2.png") 27 29 41 round;
-}
 
 .category {
   font-size: 20px;
@@ -35,22 +29,12 @@
   width: 100px;
 }
 
-.Medium-box {
-   border-style: solid;
-   border-width: 16px 33px 25px;
-   border-image: url("./../images/border.png") 16 33 25 round;
-}
 
 .Medium-box img {
   width: 200px;
   height: auto;  
 }
 
-.Small-box {
-  border-style: solid;
-  border-width: 10px 30px 25px;
-  border-image: url("./../images/border.png") 16 33 25 round;
-}
 
 .Small-box img {
   width: 100px;
@@ -77,18 +61,6 @@
 
 .item:hover:after {
   background: rgba(0,0,0,0.3);
-}
-
-/* Change this to the W/H of the image, maybe not */ 
-.item {
-  position: relative;
-  /* width: 200px;  Might not be needed */
-  /* height: 160px;  Might not be neeeded */
-  
-  /* right side border */
-  border-style: solid;
-  border-width: 0px 10px 0px 0px;
-  border-image: url("./../images/inner-border.png") 0 10 0 0 round;
 }
 
 /* Prevents the cursor to switch icon when hovering over text in the index page, prevent unnecessary. context switches (e.g. cursor icon switching from Arrow to I, signaling that the text is in focus when accidentely hovering over it.).
@@ -160,19 +132,11 @@
   color: white; 
 }
 
-.content-type-container h2, .category, .text-in-a-box h2 {
-  font-family: 'komika_axisregular'; 
-}
 
 .content-type-container h2 {
   font-size: 28px; 
 }
 
-.content-type-container p {
-  font-family: 'komika_textregular';
-  font-size: 13px; 
-  line-height: 100%; 
-}
 
 .content-type-container {
   margin-top: 100px;
