@@ -37,7 +37,7 @@ class Item(models.Model):
 
 class ItemImage(models.Model):
     image = models.ImageField(upload_to="images/", default="images/default.png")
-    item = models.ForeignKey(Item, null=True, related_name='images')
+    item = models.ForeignKey(Item, null=True, related_name='images', on_delete=models.CASCADE)
 
     def __str__(self):
         return "%s, %s" % (self.image, self.item)
