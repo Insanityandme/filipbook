@@ -5,7 +5,7 @@ from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
 
-from mysite.views import index, get_all_posts, get_item_content_by_url, get_all_categories
+from projects.views import index, get_all_posts, get_item_content_by_url, get_all_categories
 
 urlpatterns = [
     url(r'^$', index),

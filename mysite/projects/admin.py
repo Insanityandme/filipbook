@@ -3,7 +3,7 @@ from pagedown.widgets import AdminPagedownWidget
 from django.db import models
 from django.contrib import admin
 
-from mysite.projects.models import Item, ItemImage, Category, ContentType
+from projects.models import Item, ItemImage, Category, ContentType
 
 
 # Register your models here.

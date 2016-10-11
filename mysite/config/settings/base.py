@@ -11,10 +11,10 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 """
 
 import os
+from unipath import Path
 from django.core.exceptions import ImproperlyConfigured
 
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = Path(__file__).ancestor(3)
 
 
 def get_env_variable(var_name):
@@ -31,12 +31,12 @@ DEBUG = False
 
 SECRET_KEY = get_env_variable("MYSITE_KEY")
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['www.heroku.filipbook.com']
 
 # Application definition
 
 INSTALLED_APPS = [
-    'mysite.projects',
+    'projects',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -57,12 +57,12 @@ MIDDLEWARE_CLASSES = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'mysite.urls'
+ROOT_URLCONF = 'config.urls'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, "mysite/templates")],
+        'DIRS': [BASE_DIR.child("templates")],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -75,7 +75,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'mysite.wsgi.application'
+WSGI_APPLICATION = 'config.wsgi.application'
 
 
 # Database
@@ -121,15 +121,14 @@ USE_L10N = True
 
 USE_TZ = True
 
-
-MEDIA_ROOT = os.path.join(BASE_DIR, "mysite/media")
+MEDIA_ROOT = BASE_DIR.child("media")
 MEDIA_URL = '/media/'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
-STATIC_ROOT = os.path.join(BASE_DIR, "static")
+STATIC_ROOT = BASE_DIR.child("static")
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "front-end/bundles"),
+    BASE_DIR.child("static"),
 ]
