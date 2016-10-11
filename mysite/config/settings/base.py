@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 """
 
 import os
+import dj_database_url
 from unipath import Path
 from django.core.exceptions import ImproperlyConfigured
 
@@ -25,8 +26,6 @@ def get_env_variable(var_name):
         error_msg = "Set the {} environment variable".format(var_name)
         raise ImproperlyConfigured(error_msg)
 
-
-# SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
 SECRET_KEY = get_env_variable("MYSITE_KEY")
@@ -134,3 +133,5 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     BASE_DIR.child("assets"),
 ]
+
+DATABASES["default"] = dj_database_url.config(conn_max_age=600)

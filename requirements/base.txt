@@ -4,3 +4,4 @@ Pillow==3.4.1
 Unipath==1.1
 django-pagedown==0.1.1
 gunicorn==19.6.0
+dj-database-url==0.4.1
