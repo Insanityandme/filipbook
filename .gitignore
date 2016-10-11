@@ -3,5 +3,6 @@ __pycache__
 misc
 .DS_Store
 .flake8
+static
 
 
