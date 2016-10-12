@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Come fly with me</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+        <link rel="stylesheet" href="{% static 'css/main.css' %}" type="text/css" media="all">
+    </head>
+    <body class="Site">
+        <header class="Site-header">
+            {% block header %}
+            {% endblock %}
+        </header>
+        {% block main %}
+            {% block content %}
+            {% endblock %}
+        {% endblock %}
+        <footer class="Site-footer">
+            <div class="Footer">
+                <span class="Footer-social"></span> 
+                <div class="Footer-credits">
+                    <span class="Footer-credit"></span>
+                    <span class="Footer-credit"></span>
+                    <span class="Footer-credit"></span>
+                </div>
+            </div> 
+        </footer>
+        <!-- scripts n shit here -->
+    </body>
+</html>

@@ -1,5 +1,7 @@
 @import 'normalize.css';
 
+
+
 .Grid {
   display: flex;
 }
@@ -20,6 +22,10 @@
 }
 
 .Border {
+}
+
+html {
+    background-color: #AAA;
 }
 
 

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block header %}
+<div class="Header Header--cozy">
+    {% include "header.html" %}
+</div>
+{% endblock %}
+
+{% block main %}
+<main class="Site-content">
+    <div class="Container">
+        {% block content %}
+            <p>hi I am content</p>
+        {% endblock %}
+    </div>
+</main>
+{% endblock %}
