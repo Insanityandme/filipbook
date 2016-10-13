@@ -145,7 +145,3 @@ STATICFILES_DIRS = (
 # https://warehouse.python.org/project/whitenoise/
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
-# Using AWS S3 to store file uploads
-
-DEFAULT_FILE_STORAGE = 'storages.backends.s3.S3Storage'
