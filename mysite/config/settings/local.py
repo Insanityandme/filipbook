@@ -1,4 +1,4 @@
-from .base import *
+from .base import *  # noqa: F403
 
 DEBUG = True
 
@@ -11,9 +11,8 @@ DATABASES = {
     }
 }
 
-ALLOWED_HOSTS += ['127.0.0.1', 'localhost']
-INSTALLED_APPS += ["debug_toolbar"]
-debug_toolbar = 'debug_toolbar.middleware.DebugToolbarMiddleware'
-MIDDLEWARE.insert(0, debug_toolbar)
+ALLOWED_HOSTS += ['127.0.0.1', 'localhost']  # noqa: F405
 
-MEDIA_ROOT = BASE_DIR.child("media")
+INSTALLED_APPS += ["debug_toolbar"]  # noqa: F405
+debug_toolbar = 'debug_toolbar.middleware.DebugToolbarMiddleware'
+MIDDLEWARE.insert(0, debug_toolbar)  # noqa: F405
