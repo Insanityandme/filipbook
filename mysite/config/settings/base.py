@@ -29,7 +29,7 @@ DEBUG = False
 
 SECRET_KEY = get_env_variable("MYSITE_KEY")
 
-ALLOWED_HOSTS = ['filipbook.herokuapp.com', '127.0.0.1', '0.0.0.0', 'localhost']
+ALLOWED_HOSTS = ['filipbook.herokuapp.com', 'filipbook.com', 'www.filipbook.com']
 
 # Application definition
 
@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'pagedown',
+    'markdown_deux',
 ]
 
 MIDDLEWARE = [

@@ -9,7 +9,7 @@ from projects.views import index, projects, get_all_posts, get_all_categories
 urlpatterns = [
     url(r'^$', index),
     url(r'^admin/', admin.site.urls),
-    url(r'projects/(?P<url>[-\w]+)/$', projects),
+    url(r'projects/(?P<slug>[-\w]+)/$', projects),
     url(r'^api/posts/$', get_all_posts),
     url(r'^api/categories/$', get_all_categories),
 ]

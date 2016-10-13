@@ -26,7 +26,7 @@ class Item(models.Model):
 
     title = models.CharField(max_length=100, unique=True, blank=True)
     subtitle = models.CharField(max_length=100, blank=True)
-    url = models.CharField(max_length=100, unique=True)
+    slug = models.SlugField(max_length=50, default="slug")
     content = models.TextField()
     thumbnail = models.ImageField(upload_to="images/", default="images/default.png")
     pub_date = models.DateField(db_index=True, auto_now_add=True)

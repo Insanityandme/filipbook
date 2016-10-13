@@ -1,5 +1,10 @@
 {% extends "default.html" %}
+{% load markdown_deux_tags %}
+
+{% block head %}
+    {% include "highlight.html" %}
+{% endblock %}
 
 {% block content %}
-    <p>Hi I'm a youtube scraper wow</p>
+    {{ project.content|markdown }}
 {% endblock %}

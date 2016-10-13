@@ -5,16 +5,14 @@ from .models import Item, Category
 
 
 def index(request):
-    items = Item.objects.all()
-    context = {'items': items}
+    projects = Item.objects.all()
+    context = {'projects': projects}
     return render(request, 'index.html', context)
 
 
-def projects(request, url):
-    # returns a list()
-    # content = Item.objects.filter(url=url).values('content')
-    context = {}
-    # returns a json object
+def projects(request, slug):
+    project = Item.objects.filter(slug=slug)
+    context = {'project': project[0]}
     return render(request, 'projects/projects.html', context)
 
 
