@@ -1,2 +1,3 @@
 @import 'normalize.css';
-
+@import 'components/grid.css';
+@import 'components/feature.css';

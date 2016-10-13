@@ -7,3 +7,4 @@ gunicorn==19.6.0
 dj-database-url==0.4.1
 whitenoise==3.2.2
 django-markdown-deux==1.0.5
+django-storages==1.5.1
