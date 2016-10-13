@@ -18,5 +18,7 @@ AWS_ACCESS_KEY_ID = get_env_variable("AWS_ACCESS_KEY_ID")  # noqa: F405
 AWS_SECRET_ACCESS_KEY = get_env_variable("AWS_SECRET_ACCESS_KEY")  # noqa: F405
 AWS_STORAGE_BUCKET_NAME = get_env_variable("AWS_STORAGE_BUCKET_NAME")  # noqa: F405
 
-
 DATABASES["default"] = dj_database_url.config(conn_max_age=600)  # noqa: F405
+
+MEDIA_URL = 'https://s3.amazonaws.com/my-website-assets/'  # noqa: F405
+MEDIA_ROOT = ''  # noqa: F405

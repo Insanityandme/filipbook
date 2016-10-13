@@ -129,6 +129,8 @@ USE_L10N = True
 
 USE_TZ = True
 
+MEDIA_ROOT = BASE_DIR.child("media")
+MEDIA_URL = '/media/'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
@@ -144,6 +146,6 @@ STATICFILES_DIRS = (
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
+# Using AWS S3 to store file uploads
 
-MEDIA_URL = 'https://s3.amazonaws.com/filipbookmedia/'
-MEDIA_URL = '/media/'
+DEFAULT_FILE_STORAGE = 'storages.backends.s3.S3Storage'
