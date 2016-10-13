@@ -22,9 +22,11 @@
                         <li class="Grid-cell u-full u-med-10f2 u-large-1of3">
                             <div class="Feature">
                                 <p>{{ project.slug }}</p>
-                                <figure class="Feature-figure">
-                                    <img class="Feature-image" src="{{ project.thumbnail.url }}"/>   
-                                </figure>
+                                <a href="#">
+                                    <figure class="Feature-figure">
+                                        <img class="Feature-image" src="{{ project.thumbnail.url }}"/>   
+                                    </figure>
+                                </a>
                             </div>
                         </li>
                     {% endfor %}
