@@ -4,14 +4,13 @@ from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
 
-from projects.views import index, projects, get_all_posts, get_all_categories
+from projects.views import index, projects, get_all_posts
 
 urlpatterns = [
     url(r'^$', index),
     url(r'^admin/', admin.site.urls),
     url(r'projects/(?P<slug>[-\w]+)/$', projects, name="projects"),
     url(r'^api/posts/$', get_all_posts),
-    url(r'^api/categories/$', get_all_categories),
 ]
 
 if settings.DEBUG is True:

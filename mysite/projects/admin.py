@@ -1,9 +1,10 @@
-from pagedown.widgets import AdminPagedownWidget
+# from pagedown.widgets import AdminPagedownWidget
 
-from django.db import models
+# from django.db import models
+from .forms import ItemForm
 from django.contrib import admin
 
-from projects.models import Item, ItemImage, Category, ContentType
+from .models import Item, ItemImage
 
 
 # Register your models here.
@@ -16,27 +17,17 @@ class ItemImageInline(admin.StackedInline):
 
 
 class ItemAdmin(admin.ModelAdmin):
-    list_display = ('title', 'pub_date',)
+    form = ItemForm
+    list_display = ('title', 'pub_date', )
     list_filter = ('pub_date',)
     ordering = ('-pub_date',)
     search_fields = ('title',)
 
     inlines = [ItemImageInline, ]
 
-    formfield_overrides = {
-            models.TextField: {'widget': AdminPagedownWidget},
-    }
-
-
-class CategoryAdmin(admin.ModelAdmin):
-    list_display = ('name', )
-
-
-class ContentTypeAdmin(admin.ModelAdmin):
-    list_display = ('title', 'subtitle',)
-
+    # formfield_overrides = {
+    # models.TextField: {'widget': AdminPagedownWidget},
+    # }
 
 admin.site.register(Item, ItemAdmin)
 admin.site.register(ItemImage, ItemImageAdmin)
-admin.site.register(Category, CategoryAdmin)
-admin.site.register(ContentType, ContentTypeAdmin)

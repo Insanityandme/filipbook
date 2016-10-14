@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.core import serializers
-from .models import Item, Category
+from .models import Item
 
 
 def index(request):
@@ -21,11 +21,3 @@ def get_all_posts(request):
     items = serializers.serialize("json", items, use_natural_foreign_keys=True)
 
     return HttpResponse(items, content_type="application/json")
-
-
-def get_all_categories(request):
-    categories = Category.object.all()
-
-    categories = serializers.serialize("json", categories)
-
-    return HttpResponse(categories, content_type="application/json")
