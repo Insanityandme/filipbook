@@ -1,1 +1,1 @@
--r requirements/production.txt # includes the base.txt requirements file
+-r requirements/staging.txt 
