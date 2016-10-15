@@ -115,11 +115,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-# https://django-debug-toolbar.readthedocs.io/en/stable/installation.html
-# The debug_toolbar is shown only if your IP is listed in the
-# internal INTERNAL_IPS setting.
-
-INTERNAL_IPS = ('127.0.0.1', 'filipbook-staging.herokuapp.com',)
 
 
 # Internationalization
