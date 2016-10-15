@@ -11,4 +11,6 @@ SECURE_SSL_REDIRECT = True
 SECURE_CONTENT_TYPE_NOSNIFF = True
 SECURE_BROWSER_XSS_FILTER = True
 
+ALLOWED_HOSTS += ['filipbook.herokuapp.com', 'filipbook.com', 'www.filipbook.com']  # noqa: F405
+
 DATABASES["default"] = dj_database_url.config(conn_max_age=600)  # noqa: F405
