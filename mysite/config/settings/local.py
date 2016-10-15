@@ -27,5 +27,5 @@ def show_toolbar(request):
 # Ensures that the debug_toolbar can be shown on my staging server
 
 DEBUG_TOOLBAR_CONFIG = {
-    'SHOW_TOOLBAR_CALLBACK': 'config.settings.base.show_toolbar'
+    'SHOW_TOOLBAR_CALLBACK': 'config.settings.local.show_toolbar'
 }
