@@ -139,7 +139,7 @@ MEDIA_URL = '/media/'
 STATIC_ROOT = BASE_DIR.child("static")
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (
-    BASE_DIR.child("assets"),
+    BASE_DIR.child("build"),
 )
 
 # Simplified static file serving.
