@@ -11,3 +11,7 @@ gulp.task('css', function() {
          .pipe(gulp.dest('./mysite/build/css'))
     )
 })
+
+gulp.task('watch', function() {
+    gulp.watch('./mysite/assets/css/main.css', ['css'])
+})
