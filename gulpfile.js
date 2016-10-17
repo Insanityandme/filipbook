@@ -7,6 +7,7 @@ gulp.task('css', function() {
          .pipe(postcss([
             require("postcss-import")(),
             require("postcss-cssnext")(),
+            require("cssnano")(),
          ]))
          .pipe(gulp.dest('./mysite/build/css'))
     )
