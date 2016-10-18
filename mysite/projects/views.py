@@ -5,7 +5,7 @@ from .models import Item
 
 
 def index(request):
-    projects = Item.objects.all()
+    projects = Item.objects.all().order_by('-pub_date')
     context = {'projects': projects}
     return render(request, 'index.html', context)
 

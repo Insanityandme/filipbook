@@ -8,7 +8,7 @@ class Item(models.Model):
     content = models.TextField()
     excerpt = models.TextField(max_length=200)
     thumbnail = models.ImageField(upload_to="images/", default="images/default.png")
-    pub_date = models.DateField(db_index=True, auto_now_add=True)
+    pub_date = models.DateField(db_index=True)
 
     def __str__(self):
         return "%s, %s" % (self.title, self.pub_date)

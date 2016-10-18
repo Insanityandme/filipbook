@@ -1,7 +1,8 @@
 {% extends "base.html" %}
 
+
 {% block header %}
-    <div class="Header">
+    <div class="Header Header--cozy">
         {% include "header.html" %}
     </div>
 {% endblock %}
@@ -11,25 +12,22 @@
     {% block content %}    
         <section class="Section">
             <div class="Container">
-                <h1 class="Section-heading">Introduction</h2>
-                <p>Hey there my name is Filip, on the internet I go by the name @insanityandme, but you can call me Filip if you want. My days are spent trying to do programming but it wasn't always like that. I wanna show</p>
-                <p>Here some of my work</p>
-            </div>
-        </section>
-        <section class="Section">
-            <div class="Container">
-                <h2 class="Section-heading">Showcase</h2>
-                <ul class="Grid Grid--guttersLg">
+                <!--
+                <h2 class="Section-heading">Projects</h2> 
+                -->
+                <ul class="Grid Grid--guttersSm">
                     {% for project in projects %}
-                        <li class="Grid-cell u-full u-med-10f2 u-large-1of3">
+                        <li class="Grid-cell u-full u-med-1of2 u-large-1of3">
                             <div class="Feature">
                                 <a href="/projects/{{ project.slug }}">
                                     <figure class="Feature-figure">
                                         <img class="Feature-image" src="{{ project.thumbnail.url }}"/>   
                                     </figure>
+                                    <!--
                                     <h3 class="Feature-title">{{ project.title }}</h3>
+                                    -->
                                 </a>
-                                <p class="Feature-description">{{ project.excerpt }}</p>
+                                <p class="Feature-description">00{{ forloop.revcounter }} - {{ project.pub_date|date:"y m d" }}</p>
                             </div>
                         </li>
                     {% endfor %}
