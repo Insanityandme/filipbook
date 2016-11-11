@@ -1,7 +1,7 @@
 *.pycache
 __pycache__
-**misc/
-*.DS_Store
+misc/
+.DS_Store
 .flake8
 static
 
