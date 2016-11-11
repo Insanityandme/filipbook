@@ -1,5 +1,5 @@
 # Commands for working with this project
-// start postgres server:
+**Start postgres server:**
 `postgres -D /usr/local/var/postgres/`
 `createdb name_of_db`
 
@@ -27,13 +27,8 @@
 
 https://devcenter.heroku.com/articles/heroku-postgresql#pg-push-and-pg-pull
 
-# links and resources
-* https://console.aws.amazon.com/s5/ // where I host my media files
-* filipbook-staging.herokuapp.com
-* filipbook.herokuapp.com
-* filipbook.com
 
-## How to fix .gitignore not working as you'd like
+### How to fix .gitignore not working as you'd like
 **First commit any outstanding code changes,** and then, run this command:
 
 `git rm -r --cached .`
@@ -42,5 +37,11 @@ https://devcenter.heroku.com/articles/heroku-postgresql#pg-push-and-pg-pull
 
 `git commit -m ".gitignore is now working"`
 
-## How to work with postcss in your local dev env
+### How to work with postcss in your local dev env
 `gulp watch` (will watch for changes in gulp-assets)
+
+# links and resources
+* https://console.aws.amazon.com/s5/ // where I host my media files
+* filipbook-staging.herokuapp.com
+* filipbook.herokuapp.com
+* filipbook.com
