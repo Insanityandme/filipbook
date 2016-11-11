@@ -1,6 +1,6 @@
 *.pycache
 __pycache__
-misc/
+**/misc
 *.DS_Store
 .flake8
 static
