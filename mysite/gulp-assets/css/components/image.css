@@ -1,6 +1,6 @@
 .Image {
   display: block;
-  width: 40px;
+  max-width: 400px;
   height: auto;
   margin-top: 0.2em;
 }
@@ -11,9 +11,10 @@
 
 @media (--break-md) {
   .Image {
-    width: 70px;
+    width: 700px;
   }
   .Image--tiny {
     width: 40px;
   }
 }
+

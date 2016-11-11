@@ -8,4 +8,4 @@ class ItemForm(forms.ModelForm):
 
     class Meta:
         model = Item
-        fields = ('title', 'slug', 'pub_date', 'content', 'excerpt', 'thumbnail',)
+        fields = ('title', 'slug', 'pub_date', 'content', 'excerpt', 'thumbnail', 'hero')

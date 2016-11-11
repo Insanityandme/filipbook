@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 import os
 from unipath import Path
 from django.core.exceptions import ImproperlyConfigured
+# from markdown_deux.conf.settings import MARKDOWN_DEUX_DEFAULT_STYLE
 
 BASE_DIR = Path(__file__).ancestor(3)
 
@@ -138,6 +139,7 @@ MEDIA_URL = '/media/'
 STATIC_ROOT = BASE_DIR.child("static")
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (
+    BASE_DIR.child("django-assets"),
     BASE_DIR.child("build"),
 )
 
@@ -157,6 +159,12 @@ AWS_QUERYSTRING_AUTH = False
 AWS_HEADERS = {
     'Expires': 'Thu, 15 Apr 2010 20:00:00 GMT',
     'Cache-Control': 'max-age=2592000',
+}
+
+MARKDOWN_DEUX_STYLES = {
+    "default": {
+        "safe_mode": False,
+    },
 }
 
 MEDIA_URL = 'https://%s/' % AWS_S3_CUSTOM_DOMAIN

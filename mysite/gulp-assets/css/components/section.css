@@ -1,10 +1,12 @@
 .Section {
   /* padding: 0 var(--space); */
 }
+
 .Section:nth-child(2n) {
-  background-color: hsla(31, 15%, 50%, 0.1);
+  /* background-color: hsla(31, 15%, 50%, 0.1); */
   overflow: hidden; /* Contain margins. */
 }
+
 .Section::before,
 .Section::after {
   content: '\00a0'; /* &nbsp; */
@@ -18,6 +20,7 @@
 .Section::after {
   margin-top: var(--space);
 }
+
 @media (--break-lg) {
   .Section {
     /* padding: 0 var(--space-lg); */

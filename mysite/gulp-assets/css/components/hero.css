@@ -1,0 +1,10 @@
+.Hero {
+  margin: 0 auto;
+  background-color: #090F14;
+  width: 100%;
+}
+
+.Hero-image {
+  height: auto;
+  max-width: 100%;
+}

@@ -1,0 +1,12 @@
+.Container {
+  max-width: 40em;
+  margin: 0 auto;
+}
+
+.Container--full {
+    max-width: 80em;
+}
+
+.Container--img-resize img {
+  max-width: 100%;
+}

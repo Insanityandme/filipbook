@@ -4,6 +4,15 @@
 {% block head %}
     {% include "highlight.html" %}
 {% endblock %}
+{% block hero %}
+    <div class="Hero">
+        <figure class="Hero-figure">
+            <img class="Hero-image" src="{{ project.hero.url }}"/>
+        </figure>
+        <div class="Hero-title">
+        </div>
+    </div>
+{% endblock %}
 
 {% block content %}
     <h1>{{ project.title }}</h1>

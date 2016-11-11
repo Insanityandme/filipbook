@@ -8,33 +8,44 @@
 {% endblock %}
 
 {% block main %}
-<main class="Site-content Site-content--full">
-    {% block content %}    
-        <section class="Section">
-            <div class="Container">
-                <!--
-                <h2 class="Section-heading">Projects</h2> 
-                -->
-                <ul class="Grid Grid--guttersSm">
-                    {% for project in projects %}
-                        <li class="Grid-cell u-full u-med-1of2 u-large-1of3">
-                            <div class="Feature">
-                                <a href="/projects/{{ project.slug }}">
-                                    <figure class="Feature-figure">
-                                        <img class="Feature-image" src="{{ project.thumbnail.url }}"/>   
-                                    </figure>
-                                    <!--
-                                    <h3 class="Feature-title">{{ project.title }}</h3>
-                                    -->
-                                </a>
-                                <p class="Feature-description">00{{ forloop.revcounter }} - {{ project.pub_date|date:"y m d" }}</p>
-                            </div>
-                        </li>
-                    {% endfor %}
-                </ul>
-            </div> 
-        </section>
-    {% endblock %}
+    <main class="Site-content Site-content--full">
+{% block content %}    
+    <!--
+    <section class="Section">
+       <div class="Container Container-full">
+         <h2 class="Section-heading">Introduction</h2>
+         <p>bla bla ba</p>
+       </div>   
+    </section>
+    -->
+    <section class="Section">
+        <div class="Container Container--full">
+            <!--
+            <h2 class="Section-heading">Projects</h2> 
+            -->
+            <ul class="Grid Grid--guttersSm">
+                {% for project in projects %}
+                <li class="Grid-cell u-full u-med-1of2 u-large-1of3">
+                    <div class="Feature">
+                        <a href="/projects/{{ project.slug }}">
+                            <figure class="Feature-figure">
+                                <img class="Feature-image" src="{{ project.thumbnail.url }}"/>   
+                            </figure>
+                            <!--
+                            <h2 class="Feature-title">{{ project.title }}</h2>
+                            -->
+                            <p class="Feature-excerpt">{{ project.excerpt }}</p>
+                        </a>
+                        <!--
+                        <p class="Feature-description">00{{ forloop.revcounter }} - {{ project.pub_date|date:"y m d" }}</p>
+                        -->
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+        </div> 
+    </section>
+{% endblock %}
 
 </main>
 {% endblock %}

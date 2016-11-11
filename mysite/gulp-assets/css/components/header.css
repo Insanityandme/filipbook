@@ -11,11 +11,13 @@
 
 .Header-title {
   margin: 0 0 0.15em;
+  font-family: var(--abhaya-libre);
   font-size: 1.8em;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1;
   word-spacing: 0.08em;
-  color: #FB003F;
+  color: hsl(150, 45%, 50%);
+  border-bottom: 1px solid hsl(150, 45%, 50%);
 }
 .Header-title i {
   font-family: serif;
@@ -30,9 +32,18 @@
 .Header-title a:focus, .Header-title a:hover, .Header-title a:active {
   text-decoration: none;
 }
+
+@media (--break-sm) {
+    .Header-title {
+        max-width: 120px;    
+        margin: 0 auto 0.15em auto;
+    }
+}
+
 @media (--break-lg) {
   .Header-title {
     font-size: 4em;
+    max-width: 100%;
   }
 }
 
@@ -62,6 +73,7 @@
     justify-content: center;
   }
 }
+
 @media (--break-lg) {
   .Header-actions {
     font-size: 1.1em;
@@ -88,11 +100,11 @@
     align-items: baseline;
   }
   .Header--cozy .Header-title {
-    font-size: 1.5em;
+    font-size: 2.6em;
   }
   .Header--cozy .Header-subTitle {
     margin: 0 0 0 1em;
-    font-size: 0.8em;
+    font-size: 1em;
     font-weight: 300;
     color: gray;
   }

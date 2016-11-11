@@ -11,5 +11,10 @@
 @import 'components/header.css';
 @import 'components/button.css';
 @import 'components/section.css';
+@import 'components/media.css';
+@import 'components/image.css';
+@import 'components/hero.css';
 
 @import 'utils/media.css';
+
+@import 'vendor/fonts.css';

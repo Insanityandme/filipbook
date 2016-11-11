@@ -49,6 +49,7 @@ h3 {
 p,
 pre {
   margin: 0 0 1.5em;
+  font-family: var(--raleway);
 }
 
 code,
@@ -87,7 +88,6 @@ ul {
 li {
   margin-bottom: 0.333em;
 }
-
 
 figure {
   margin: 0;

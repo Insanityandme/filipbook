@@ -4,7 +4,7 @@
 
 .Feature-figure {
   margin-bottom: 0.75em;
-  /* border: 1px solid hsl(0, 0%, 85%); */
+  border: 1px solid #111; 
   transition: border-color 0.2s;
 }
 
@@ -16,6 +16,7 @@
 }
 
 .Feature-title {
+  font-family: var(--abhaya-libre);
   margin: 0 0 0.5em;
   color: hsl(0, 0%, 25%);
   text-align: center;
@@ -27,13 +28,13 @@
   font-size: 1.2em;
   text-align: center;
   color: hsl(0, 0%, 30%);
-  font-family: 'Monospace';
 }
 
 .Feature a:active .Feature-figure,
 .Feature a:focus .Feature-figure,
 .Feature a:hover .Feature-figure {
   border-color: hsl(150, 45%, 50%);
+
 }
 
 .Feature a:active .Feature-title,

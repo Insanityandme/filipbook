@@ -1,0 +1,8 @@
+:root {
+  --space: 1.5em;
+  --space-lg: 2em;
+  --bg-color: hsl(150, 45%, 50%);
+  --abhaya-libre: 'Abhaya Libre', serif;
+  --raleway: 'Raleway', sans-serif;
+  --open-sans: 'Open Sans', sans-serif;
+}
