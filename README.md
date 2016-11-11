@@ -41,7 +41,7 @@ https://devcenter.heroku.com/articles/heroku-postgresql#pg-push-and-pg-pull
 `gulp watch` (will watch for changes in gulp-assets)
 
 # links and resources
-* https://console.aws.amazon.com/s5/ // where I host my media files
+* https://console.aws.amazon.com/s3/ (where I host my media files)
 * filipbook-staging.herokuapp.com
 * filipbook.herokuapp.com
 * filipbook.com
