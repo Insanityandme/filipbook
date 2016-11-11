@@ -1,8 +1,8 @@
 *.pycache
 __pycache__
-misc/*
-.DS_Store
-.flake8
+misc
+DS_Store
+flake8
 static
 
 node_modules
