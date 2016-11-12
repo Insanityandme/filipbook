@@ -40,6 +40,15 @@ https://devcenter.heroku.com/articles/heroku-postgresql#pg-push-and-pg-pull
 ### How to work with postcss in your local dev env
 `gulp watch` (will watch for changes in gulp-assets)
 
+# How to copy and start this project on a new machine
+```
+git clone https://github.com/insanityandme/filipbook
+pip install -r requirements/local.txt
+python mysite/manage.py runserver --settings=config.settings.local
+```
+aaand you're up and running
+
+
 # links and resources
 * https://console.aws.amazon.com/s3/ (where I host my media files)
 * filipbook-staging.herokuapp.com
