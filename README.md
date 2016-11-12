@@ -10,12 +10,16 @@ createdb name_of_db
 
 ### Staging
 change `requirements.txt` to `requirements/staging.txt`
+
 change `manage.py` to include `config.settings.staging`
+
 `git push staging master`
 
 ### Production
 change `requirements.txt` to include `requirements/production.txt`
+
 change `manage.py` to include `config.settings.production`
+
 `git push heroku master`
 
 ### push database to heroku
