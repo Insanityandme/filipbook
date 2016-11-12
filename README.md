@@ -7,16 +7,16 @@
 `python manage.py runserver --settings=config.settings.local` 
 
 ### Staging
-`change requirements.txt to requirements/staging.txt`
+change `requirements.txt` to `requirements/staging.txt`
 
-`change manage.py to include config.settings.staging`
+change `manage.py` to include `config.settings.staging`
 
 `git push staging master`
 
 ### Production
-`change requirements.txt to include requirements/production.txt`
+change `requirements.txt` to include `requirements/production.txt`
 
-`change manage.py to include config.settings.production`
+change `manage.py` to include `config.settings.production`
 
 `git push heroku master`
 
@@ -46,8 +46,8 @@ git clone https://github.com/insanityandme/filipbook
 pip install -r requirements/local.txt
 python mysite/manage.py runserver --settings=config.settings.local
 ```
-aaand you're up and running
 
+aaand you're up and running
 
 # links and resources
 * https://console.aws.amazon.com/s3/ (where I host my media files)
